@@ -71,3 +71,37 @@ pip freeze > requirements.txt
 * To see Celery Worker status
 
 ###### Here `Taskschedule` is a project name.
+
+
+##### Python competitive programming
+> 1. Given a sorted array, the task is to remove the duplicate elements from the array
+(Using only the Input Array)
+
+```python
+def remove_duplicate_values(arr, num):
+    if num == 0 or num == 1:
+        return num
+
+    temp = list(range(num))
+
+    j = 0
+    for i in range(0, num - 1):
+        if arr[i] != arr[i + 1]:
+            temp[j] = arr[i]
+            j += 1
+
+    temp[j] = arr[num - 1]
+    j += 1
+
+    for i in range(0, j):
+        arr[i] = temp[i]
+    return j
+
+
+items = [int(x) for x in input('Enter numbers: ').split()]
+val = len(items)
+_val = remove_duplicate_values(items, val)
+for v in range(_val):
+    print((items[v]), end=" ")
+```
+

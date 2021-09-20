@@ -1,8 +1,6 @@
-env
-venv
-db.sqlite
-.idea
-media
-__pycache__
-migrations
-.DS_Store
+.vscode/
+
+npm-debug.log*
+node_modules/
+package-lock.json
+

@@ -18,3 +18,66 @@ cd nodeGraphql
 npm install
 npm start
 ```
+
+###### GraphQL query example:
+```javascript
+query ExampleQuery {
+  enrollment {
+    id
+    email
+    fullName
+    dept
+  }
+}
+```
+Response body:
+```javascript
+{
+  "data": {
+    "enrollment": [
+      {
+        "id": "1",
+        "email": "ada@telixia.com",
+        "fullName": "Ada Eze",
+        "dept": "Software Engineering"
+      },
+      {
+        "id": "2",
+        "email": "musa@telixia.com",
+        "fullName": "Musa Bashir",
+        "dept": "Data Engineering"
+      }
+    ]
+  }
+}
+```
+
+###### Operation example:
+```javascript
+mutation {
+  registerStudent(
+    email: "ohi@sagor.me",
+    fullName: "Sagor",
+    ) {
+    id
+    email
+    fullName
+    dept
+    enrolled
+  }
+}
+```
+Response body:
+```javascript
+{
+  "data": {
+    "registerStudent": {
+      "id": "6",
+      "email": "contact@telixia.com",
+      "fullName": "Sammy",
+      "dept": null,
+      "enrolled": false
+    }
+  }
+}
+```

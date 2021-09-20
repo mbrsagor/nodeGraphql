@@ -4,10 +4,17 @@
   "description": "Grapghql API with Nodejs, Prisma, Postgres and Docker",
   "main": "index.js",
   "scripts": {
-    "start":  "node src/"
+    "start": "node src/index.js"
   },
-  "keywords": ["Grapghql", "API", "Node.js", "Prisma", "Postgres", "Docker"],
-  "author": "",
+  "keywords": [
+    "Grapghql",
+    "API",
+    "Node.js",
+    "Prisma",
+    "Postgres",
+    "Docker"
+  ],
+  "author": "Mbr-Sagor",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.18.2",

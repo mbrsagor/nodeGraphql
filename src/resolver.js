@@ -9,6 +9,7 @@ const resolvers = {
     enrolled: (parent) => parent.enrolled,
   },
 
+  // Query: params:@get
   Query: {
     enrollment: (parent, args) => {
       return students.filter((student) => student.enrolled);
@@ -17,7 +18,7 @@ const resolvers = {
       return students.find((student) => student.id === Number(args.id));
     },
   },
-
+  // Mutation: params:@post, @put, @delete
   Mutation: {
     registerStudent: (parent, args) => {
       students.push({
